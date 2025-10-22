@@ -3,256 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio kuswanto1322</title>
+  <title>Website Pembelajaran Kuswanto</title>
   <style>
-    * {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-      color: white;
-      min-height: 100vh;
-    }
-
-    header {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(8px);
-      z-index: 100;
-    }
-
-    header h1 {
-      font-size: 28px;
-      letter-spacing: 2px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #00d4ff;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px;
-      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80');
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      color: #fff;
     }
-
-    .hero h2 {
-      font-size: 50px;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-top: 15px;
-      max-width: 600px;
-      line-height: 1.6;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-    }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .section h3 {
-      font-size: 30px;
-      border-bottom: 3px solid #00d4ff;
-      display: inline-block;
-      margin-bottom: 25px;
-    }
-
-    .about, .education, .learning, .coding, .ka, .projects, .contact {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 30px;
-      border-radius: 10px;
-      margin-bottom: 50px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .project-item {
-      margin-bottom: 20px;
-    }
-
-    .project-item h4 {
-      color: #00d4ff;
-    }
-
-    .contact a {
-      color: #00d4ff;
-      text-decoration: none;
-    }
-
-    footer {
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
       text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.5);
-      font-size: 14px;
-      color: #ccc;
+      padding: 20px 0;
     }
-
-    @media (max-width: 600px) {
-      .hero h2 { font-size: 36px; }
-      .hero p { font-size: 16px; }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-weight: bold;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 20px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.9);
+      min-width: 180px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      float: none;
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+      background-color: #575757;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    section {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #ffd700;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 5px;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>🌟 Portofolio kuswanto1322 🌟</h1>
+<header>
+  <h1>Website Pembelajaran Kuswanto</h1>
+  <p>Guru PJOK & Informatika | SMA Negeri 1 Dawarblandong</p>
+</header>
+
 <nav>
-  <ul class="menu">
-    <li><a href="#tentang">Tentang Saya</a></li>
+  <a href="#profil">Data Profil</a>
 
-    <li class="dropdown">
-      <a href="#pendidikan">Pendidikan ▾</a>
-      <ul class="submenu">
-        <li><a href="#pendidikan-sma">SMA</a></li>
-        <li><a href="#pendidikan-pelatihan">Pelatihan</a></li>
-        <li><a href="#pendidikan-sertifikat">Sertifikat</a></li>
-      </ul>
-    </li>
+  <div class="dropdown">
+    <button class="dropbtn">Informatika</button>
+    <div class="dropdown-content">
+      <a href="#pembelajaran-kka">Pembelajaran KKA</a>
+    </div>
+  </div>
 
-    <li class="dropdown">
-      <a href="#pembelajaran">Pembelajaran ▾</a>
-      <ul class="submenu">
-        <li><a href="#materi">Materi</a></li>
-        <li><a href="#projek">Projek</a></li>
-        <li><a href="#evaluasi">Evaluasi</a></li>
-      </ul>
-    </li>
+  <div class="dropdown">
+    <button class="dropbtn">PJOK</button>
+    <div class="dropdown-content">
+      <a href="#pjok10">PJOK Kelas 10</a>
+      <a href="#pjok11">PJOK Kelas 11</a>
+      <a href="#pjok12">PJOK Kelas 12</a>
+    </div>
+  </div>
 
-    <li class="dropdown">
-      <a href="#koding">Koding ▾</a>
-      <ul class="submenu">
-        <li><a href="#html">HTML</a></li>
-        <li><a href="#css">CSS</a></li>
-        <li><a href="#javascript">JavaScript</a></li>
-      </ul>
-    </li>
-
-    <li class="dropdown">
-      <a href="#ka">Kecerdasan Artifisial ▾</a>
-      <ul class="submenu">
-        <li><a href="#ai-konsep">Konsep Dasar AI</a></li>
-        <li><a href="#ai-projek">Proyek AI</a></li>
-      </ul>
-    </li>
-
-    <li><a href="#proyek">Proyek</a></li>
-    <li><a href="#kontak">Kontak</a></li>
-  </ul>
+  <a href="#kontak">Kontak</a>
 </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Halo, Saya kuswanto1322 👋</h2>
-    <p>Selamat datang di portofolio pribadi saya! Saya suka membuat proyek kreatif, mempelajari hal baru, dan membagikan ide melalui teknologi.</p>
-  </section>
+<section id="profil">
+  <h2>Data Profil</h2>
+  <p><strong>Nama:</strong> Kuswanto</p>
+  <p><strong>Pendidikan:</strong> S1 Pendidikan Jasmani, Olahraga, dan Kesehatan (UNESA); S2 Pendidikan Agama Islam (UNISDA Lamongan)</p>
+  <p><strong>Profesi:</strong> Guru PJOK & Informatika di SMA Negeri 1 Dawarblandong</p>
+  <p><strong>Deskripsi Singkat:</strong> Kuswanto adalah pendidik yang berpengalaman di bidang PJOK dan PAI, serta aktif mengembangkan pembelajaran digital berbasis proyek. Ia menciptakan berbagai inovasi seperti <em>Jalengku Tea</em>, <em>GEMAR (Gerakan Memungut Sampah Bersama)</em>, dan media pembelajaran PAI berbasis Google Sites. Dengan motto “Belajar sepanjang hayat, berinovasi tanpa batas, dan berbagi untuk kemajuan bersama,” beliau terus berkomitmen menciptakan pembelajaran yang inspiratif dan bermakna bagi siswa.</p>
+</section>
 
-  <section id="tentang" class="section about">
-    <h3>Tentang Saya</h3>
-    <p>Kuswanto merupakan pendidik yang memiliki latar belakang Sarjana Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK) serta Magister Pendidikan Agama Islam (PAI). Ia mengabdi sebagai guru di SMA Negeri 1 Dawarblandong, sekaligus aktif dalam komunitas belajar sekolah dan pengembangan inovasi pendidikan. Berbekal pengalaman di bidang pendidikan jasmani, agama, dan teknologi pembelajaran, Kuswanto dikenal sebagai sosok yang kreatif dalam mengintegrasikan nilai-nilai karakter dan digitalisasi pembelajaran. Beberapa inovasinya antara lain “Jalengku Tea”, “GEMAR (Gerakan Memungut Sampah Bersama)”, serta pengembangan media pembelajaran PAI berbasis Google Sites.
+<section id="pembelajaran-kka">
+  <h2>Pembelajaran KKA</h2>
+  <p>Materi pembelajaran Koding dan Kecerdasan Artifisial (KKA) mencakup pengenalan dasar pemrograman, logika algoritma, serta penerapan AI sederhana dalam kehidupan sehari-hari. Siswa diharapkan mampu memahami konsep berpikir komputasional dan mengembangkan solusi kreatif berbasis teknologi.</p>
+</section>
 
-Dengan motto “Belajar sepanjang hayat, berinovasi tanpa batas, dan berbagi untuk kemajuan bersama,” Kuswanto terus berkomitmen menciptakan pembelajaran yang inspiratif dan bermakna bagi peserta didik.</p>
-  </section>
+<section id="pjok10">
+  <h2>PJOK Kelas 10</h2>
+  <p>Fokus pembelajaran pada pengenalan aktivitas jasmani, kebugaran jasmani, dan nilai sportivitas. Siswa dilatih untuk menjaga kesehatan dan mengembangkan keterampilan motorik dasar.</p>
+</section>
 
-  <section id="pendidikan" class="section education">
-    <h3>Pendidikan</h3>
-    <p>Saya menempuh pendidikan di <strong>SMA Negeri 1 Dawarblandong</strong> dengan fokus pada bidang Informatika. Saya juga aktif mengikuti kegiatan ekstrakurikuler yang mendukung pengembangan kemampuan berpikir kritis dan kolaboratif.</p>
-  </section>
+<section id="pjok11">
+  <h2>PJOK Kelas 11</h2>
+  <p>Pembelajaran difokuskan pada pengembangan keterampilan olahraga permainan, senam, dan aktivitas rekreasi, serta pentingnya gaya hidup sehat.</p>
+</section>
 
-  <section id="pembelajaran" class="section learning">
-    <h3>Pembelajaran</h3>
-    <p>Saya mengikuti pembelajaran berbasis proyek (Project Based Learning) di mana setiap tugas mendorong kreativitas dan inovasi. Beberapa topik yang saya pelajari meliputi pemrograman dasar, desain UI/UX, dan penerapan kecerdasan artifisial sederhana.</p>
-  </section>
+<section id="pjok12">
+  <h2>PJOK Kelas 12</h2>
+  <p>Menekankan pada penguatan karakter melalui aktivitas olahraga, kepemimpinan dalam tim, dan penerapan nilai-nilai kebugaran jasmani sepanjang hayat.</p>
+</section>
 
-  <section id="koding" class="section coding">
-    <h3>Koding</h3>
-    <p>Koding adalah bagian favorit saya! Saya belajar berbagai bahasa pemrograman seperti HTML, CSS, dan Python. Saya menggunakan GitHub untuk berbagi hasil kerja saya dan berkolaborasi dengan teman-teman dalam membuat proyek bersama.</p>
-  </section>
+<section id="kontak">
+  <h2>Kontak</h2>
+  <p>Email: <a href="mailto:kuswanto1322@gmail.com" style="color: #ffd700;">kuswanto1322@gmail.com</a></p>
+  <p>Instagram: <a href="https://instagram.com/" style="color: #ffd700;">@kuswanto1322</a></p>
+  <p>Alamat: SMA Negeri 1 Dawarblandong, Mojokerto, Jawa Timur</p>
+</section>
 
-  <section id="ka" class="section ka">
-    <h3>Kecerdasan Artifisial (KA)</h3>
-    <p>Pada bidang Kecerdasan Artifisial, saya belajar mengenali pola data, membuat model sederhana menggunakan Python, dan memahami cara kerja machine learning dalam membantu penyelesaian tugas sehari-hari. Saya juga menerapkan AI untuk mendukung pembelajaran digital di sekolah.</p>
-  </section>
-
-  <section id="proyek" class="section projects">
-    <h3>Proyek Saya</h3>
-
-    <div class="project-item">
-      <h4>🌐 Website Sekolah</h4>
-      <p>Membuat tampilan website sekolah sederhana dengan HTML & CSS, menampilkan profil, visi misi, dan data guru.</p>
-    </div>
-
-    <div class="project-item">
-      <h4>📱 Aplikasi Jadwal Pelajaran</h4>
-      <p>Aplikasi web ringan untuk membantu siswa mengatur jadwal belajar harian.</p>
-    </div>
-
-    <div class="project-item">
-      <h4>💡 Desain Poster Digital</h4>
-      <p>Proyek desain poster promosi kegiatan sekolah menggunakan Canva dan Photoshop.</p>
-    </div>
-  </section>
-
-  <section id="kontak" class="section contact">
-    <h3>Kontak</h3>
-    <p>📧 Email: <a href="mailto:website.kuswanto1322@gmail.com">website.kuswanto1322@gmail.com</a></p>
-    <p>💻 GitHub: <a href="https://github.com/kuswanto1322" target="_blank">github.com/kuswanto1322</a></p>
-  </section>
-
-  <footer>
-    © 2025 kuswanto1322 | Dibuat dengan 💙 menggunakan GitHub Pages
-  </footer>
+<footer>
+  <p>© 2025 Kuswanto | Website Pembelajaran SMA Negeri 1 Dawarblandong</p>
+</footer>
 
 </body>
 </html>
-<section id="proyek">
-  <h2>🧩 Proyek Saya</h2>
-
-  <p>
-    🌐 <a href="https://kuswanto1322.github.io/website-sekolah" target="_blank" style="color: #00bfff; text-decoration: none;">
-    Website Sekolah</a><br>
-    Membuat tampilan website sekolah sederhana dengan HTML & CSS, menampilkan profil, visi misi, dan data guru.
-  </p>
-
-  <p>
-    🗓️ <a href="https://kuswanto1322.github.io/aplikasi-jadwal" target="_blank" style="color: #00bfff; text-decoration: none;">
-    Aplikasi Jadwal Pelajaran</a><br>
-    Aplikasi web ringan untuk membantu siswa mengatur jadwal belajar harian.
-  </p>
-
-  <p>
-    💡 <a href="https://kuswanto1322.github.io/desain-poster" target="_blank" style="color: #00bfff; text-decoration: none;">
-    Desain Poster Digital</a><br>
-    Proyek desain poster promosi kegiatan sekolah menggunakan Canva dan Photoshop.
-  </p>
-</section>

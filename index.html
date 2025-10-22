@@ -36,65 +36,57 @@
     /* ===== NAVBAR ===== */
     nav {
       background-color: rgba(0, 0, 0, 0.85);
-      overflow: hidden;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       border-bottom: 2px solid #00bfff;
+      position: relative;
     }
 
-    nav a, .dropbtn {
-      color: white;
-      text-align: center;
+    .menu-item {
+      position: relative;
       padding: 14px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      border: none;
-      background: none;
       cursor: pointer;
+      font-weight: bold;
+      color: white;
       font-size: 15px;
     }
 
-    nav a:hover, .dropdown:hover .dropbtn {
+    .menu-item:hover {
       background-color: #00bfff;
       color: #000;
       transition: 0.3s;
     }
 
-    /* ===== DROPDOWN ===== */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-content {
+    /* ===== SUBMENU ===== */
+    .submenu {
       display: none;
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.95);
-      min-width: 180px;
-      z-index: 1;
-      border-radius: 5px;
-      border: 1px solid #00bfff;
-      text-align: left;
+      top: 48px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 2px solid #00bfff;
     }
 
-    .dropdown-content a {
+    .submenu a {
       color: white;
-      padding: 12px 16px;
       text-decoration: none;
-      display: block;
+      padding: 10px 20px;
+      margin: 0 10px;
+      display: inline-block;
+      border-radius: 5px;
+      font-weight: normal;
     }
 
-    .dropdown-content a:hover {
+    .submenu a:hover {
       background-color: #00bfff;
       color: #000;
     }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* ===== HALAMAN UTAMA KOSONG ===== */
+    /* ===== MAIN CONTENT ===== */
     main {
       height: 80vh;
       display: flex;
@@ -123,45 +115,77 @@
 </head>
 <body>
 
-  <header>
-    <h1>Website Pembelajaran Kuswanto</h1>
-    <p>Guru PJOK & Informatika | SMA Negeri 1 Dawarblandong</p>
-  </header>
+<header>
+  <h1>Website Pembelajaran Kuswanto</h1>
+  <p>Guru PJOK & Informatika | SMA Negeri 1 Dawarblandong</p>
+</header>
 
-  <nav>
-    <a href="#">Data Profil</a>
+<nav>
+  <div class="menu-item" onclick="toggleSubmenu('profil')">Data Profil</div>
 
-    <div class="dropdown">
-      <button class="dropbtn">Informatika</button>
-      <div class="dropdown-content">
-        <a href="#">Pembelajaran KKA</a>
-        <a href="#">Informatika Kelas 10</a>
-        <a href="#">Informatika Kelas 11</a>
-        <a href="#">Informatika Kelas 12</a>
-      </div>
-    </div>
+  <div class="menu-item" onclick="toggleSubmenu('informatika')">Informatika</div>
+  <div id="informatika" class="submenu">
+    <a href="#">Pembelajaran KKA</a>
+    <a href="#">Informatika Kelas 10</a>
+    <a href="#">Informatika Kelas 11</a>
+    <a href="#">Informatika Kelas 12</a>
+  </div>
 
-    <div class="dropdown">
-      <button class="dropbtn">PJOK</button>
-      <div class="dropdown-content">
-        <a href="#">PJOK Kelas 10</a>
-        <a href="#">PJOK Kelas 11</a>
-        <a href="#">PJOK Kelas 12</a>
-      </div>
-    </div>
+  <div class="menu-item" onclick="toggleSubmenu('pjok')">PJOK</div>
+  <div id="pjok" class="submenu">
+    <a href="#">PJOK Kelas 10</a>
+    <a href="#">PJOK Kelas 11</a>
+    <a href="#">PJOK Kelas 12</a>
+  </div>
 
-    <a href="#">Absensi</a>
-    <a href="#">Penilaian</a>
-    <a href="#">Kontak</a>
-  </nav>
+  <div class="menu-item" onclick="toggleSubmenu('absensi')">Absensi</div>
+  <div id="absensi" class="submenu">
+    <a href="#">Absensi Kelas 10</a>
+    <a href="#">Absensi Kelas 11</a>
+    <a href="#">Absensi Kelas 12</a>
+  </div>
 
-  <main>
-    <h2>Selamat Datang di Website Pembelajaran Berbasis AI 💻</h2>
-  </main>
+  <div class="menu-item" onclick="toggleSubmenu('penilaian')">Penilaian</div>
+  <div id="penilaian" class="submenu">
+    <a href="#">Penilaian Informatika</a>
+    <a href="#">Penilaian PJOK</a>
+  </div>
 
-  <footer>
-    <p>© 2025 Kuswanto | Website Pembelajaran SMA Negeri 1 Dawarblandong</p>
-  </footer>
+  <div class="menu-item" onclick="toggleSubmenu('kontak')">Kontak</div>
+  <div id="kontak" class="submenu">
+    <a href="#">Email</a>
+    <a href="#">Instagram</a>
+  </div>
+</nav>
+
+<main>
+  <h2>Selamat Datang di Website Pembelajaran Berbasis AI 💻</h2>
+</main>
+
+<footer>
+  <p>© 2025 Kuswanto | Website Pembelajaran SMA Negeri 1 Dawarblandong</p>
+</footer>
+
+<script>
+  // Fungsi buka/tutup submenu saat diklik
+  function toggleSubmenu(id) {
+    // Tutup semua submenu lebih dulu
+    document.querySelectorAll('.submenu').forEach(menu => {
+      if (menu.id !== id) menu.style.display = 'none';
+    });
+
+    // Toggle submenu yang diklik
+    const submenu = document.getElementById(id);
+    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  // Tutup submenu jika klik di luar area nav
+  window.addEventListener('click', function(e) {
+    if (!e.target.closest('nav')) {
+      document.querySelectorAll('.submenu').forEach(menu => menu.style.display = 'none');
+    }
+  });
+</script>
 
 </body>
 </html>

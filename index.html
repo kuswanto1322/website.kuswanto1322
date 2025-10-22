@@ -1,20 +1,82 @@
-kuswanto1322.github.io/
-│
-├── _layouts/
-│   └── default.html
-│
-├── assets/
-│   └── css/
-│       └── style.css
-│
-├── index.html
-├── informatika.html
-├── kka.html
-├── pjok.html
-├── pjok10.html
-├── pjok11.html
-├── pjok12.html
-└── profil.html
+/* Tema Sederhana untuk Website Pembelajaran */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: url('/assets/images/wallpaper.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+header {
+  background: rgba(0, 122, 204, 0.85);
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+nav ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul.menu > li {
+  position: relative;
+}
+
+nav ul.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul.menu li:hover > a {
+  color: #ffdd00;
+}
+
+nav ul.menu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 107, 179, 0.9);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  min-width: 150px;
+}
+
+nav ul.menu li:hover .submenu {
+  display: block;
+}
+
+nav ul.menu .submenu li {
+  padding: 5px 20px;
+}
+
+nav ul.menu .submenu li a {
+  color: #fff;
+}
+
+main {
+  background: rgba(255,255,255,0.9);
+  margin: 30px auto;
+  padding: 25px;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 122, 204, 0.85);
+  color: #fff;
+  margin-top: 40px;
+}
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -51,153 +113,7 @@ kuswanto1322.github.io/
   </main>
 
   <footer>
-    <p>© 2025 Kuswanto1322 | SMA Negeri 1 Dawarblandong</p>
+    <p>© 2025 Kuswanto1322 – Pembelajaran Informatika & PJOK</p>
   </footer>
 </body>
 </html>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f7f7f7;
-}
-
-header {
-  background-color: #007acc;
-  color: white;
-  padding: 10px 20px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.menu > li {
-  position: relative;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  background-color: #006bb3;
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-}
-
-.menu li:hover .submenu {
-  display: block;
-}
----
-layout: default
-title: Beranda
----
-
-<h2>Selamat datang di Website Pembelajaran Kuswanto1322</h2>
-<p>Website ini berisi materi pembelajaran Informatika dan PJOK untuk siswa SMA Negeri 1 Dawarblandong.</p>
-/* === STYLE WEBSITE PEMBELAJARAN KUSWANTO1322 === */
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  background: url('/assets/images/wallpaper.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #222;
-}
-
-header {
-  background: rgba(0, 122, 204, 0.9);
-  color: white;
-  padding: 15px 20px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 0;
-  margin: 10px 0 0;
-}
-
-.menu > li {
-  position: relative;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.menu a:hover {
-  color: #ffdd00;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  background: rgba(0, 107, 179, 0.95);
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-  border-radius: 8px;
-}
-
-.menu li:hover .submenu {
-  display: block;
-}
-
-.submenu li {
-  margin: 5px 0;
-}
-
-main {
-  background: rgba(255, 255, 255, 0.85);
-  margin: 40px auto;
-  padding: 30px;
-  max-width: 900px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 122, 204, 0.9);
-  color: white;
-  margin-top: 40px;
-}
-assets/images/
-wallpaper.jpg
-<header>
-  <h1>🌐 Situs Pembelajaran Informatika</h1>
-  <nav>
-    <ul class="menu">
-      <li><a href="/profil.html">Data Profil</a></li>
-      <li>
-        <a href="/informatika.html">Informatika</a>
-        <ul class="submenu">
-          <li><a href="/kka.html">Pembelajaran KKA</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="/pjok.html">PJOK</a>
-        <ul class="submenu">
-          <li><a href="/pjok10.html">PJOK Kelas 10</a></li>
-          <li><a href="/pjok11.html">PJOK Kelas 11</a></li>
-          <li><a href="/pjok12.html">PJOK Kelas 12</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-</header>

@@ -1,0 +1,104 @@
+kuswanto1322.github.io/
+│
+├── _layouts/
+│   └── default.html
+│
+├── assets/
+│   └── css/
+│       └── style.css
+│
+├── index.html
+├── informatika.html
+├── kka.html
+├── pjok.html
+├── pjok10.html
+├── pjok11.html
+├── pjok12.html
+└── profil.html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Situs Pembelajaran Informatika</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="/profil.html">Data Profil</a></li>
+        <li>
+          <a href="/informatika.html">Informatika</a>
+          <ul class="submenu">
+            <li><a href="/kka.html">Pembelajaran KKA</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/pjok.html">PJOK</a>
+          <ul class="submenu">
+            <li><a href="/pjok10.html">PJOK Kelas 10</a></li>
+            <li><a href="/pjok11.html">PJOK Kelas 11</a></li>
+            <li><a href="/pjok12.html">PJOK Kelas 12</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>© 2025 Kuswanto1322 | SMA Negeri 1 Dawarblandong</p>
+  </footer>
+</body>
+</html>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #007acc;
+  color: white;
+  padding: 10px 20px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #006bb3;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+---
+layout: default
+title: Beranda
+---
+
+<h2>Selamat datang di Website Pembelajaran Kuswanto1322</h2>
+<p>Website ini berisi materi pembelajaran Informatika dan PJOK untuk siswa SMA Negeri 1 Dawarblandong.</p>

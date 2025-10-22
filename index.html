@@ -102,3 +102,102 @@ title: Beranda
 
 <h2>Selamat datang di Website Pembelajaran Kuswanto1322</h2>
 <p>Website ini berisi materi pembelajaran Informatika dan PJOK untuk siswa SMA Negeri 1 Dawarblandong.</p>
+/* === STYLE WEBSITE PEMBELAJARAN KUSWANTO1322 === */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: url('/assets/images/wallpaper.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+}
+
+header {
+  background: rgba(0, 122, 204, 0.9);
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ffdd00;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: rgba(0, 107, 179, 0.95);
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  margin: 5px 0;
+}
+
+main {
+  background: rgba(255, 255, 255, 0.85);
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 122, 204, 0.9);
+  color: white;
+  margin-top: 40px;
+}
+assets/images/
+wallpaper.jpg
+<header>
+  <h1>🌐 Situs Pembelajaran Informatika</h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="/profil.html">Data Profil</a></li>
+      <li>
+        <a href="/informatika.html">Informatika</a>
+        <ul class="submenu">
+          <li><a href="/kka.html">Pembelajaran KKA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/pjok.html">PJOK</a>
+        <ul class="submenu">
+          <li><a href="/pjok10.html">PJOK Kelas 10</a></li>
+          <li><a href="/pjok11.html">PJOK Kelas 11</a></li>
+          <li><a href="/pjok12.html">PJOK Kelas 12</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>

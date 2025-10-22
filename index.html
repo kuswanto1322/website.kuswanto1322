@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Pembelajaran Kuswanto</title>
   <style>
+    /* ========== GAYA DASAR ========== */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -14,7 +15,7 @@
       color: #fff;
     }
     header {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.7);
       text-align: center;
       padding: 20px 0;
       border-bottom: 2px solid #00bfff;
@@ -25,22 +26,65 @@
       letter-spacing: 1px;
       color: #00bfff;
     }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1em;
+      color: #ddd;
+    }
+
+    /* ========== NAVBAR ========== */
     nav {
       background-color: rgba(0, 0, 0, 0.85);
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    nav a {
-      float: left;
+    nav a, .dropbtn {
       color: white;
       text-align: center;
       padding: 14px 20px;
       text-decoration: none;
       font-weight: bold;
+      border: none;
+      background: none;
+      cursor: pointer;
     }
-    nav a:hover {
+    nav a:hover, .dropdown:hover .dropbtn {
       background-color: #00bfff;
       color: #000;
     }
+
+    /* ========== DROPDOWN ========== */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.95);
+      min-width: 180px;
+      z-index: 1;
+      border-radius: 5px;
+      border: 1px solid #00bfff;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+      background-color: #00bfff;
+      color: #000;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ========== ISI HALAMAN ========== */
     section {
       background-color: rgba(0, 0, 0, 0.6);
       margin: 20px;
@@ -67,6 +111,8 @@
     a {
       color: #00bfff;
     }
+
+    /* ========== FOOTER ========== */
     footer {
       background-color: rgba(0, 0, 0, 0.8);
       text-align: center;
@@ -83,36 +129,128 @@
   <p>Guru PJOK & Informatika | SMA Negeri 1 Dawarblandong</p>
 </header>
 
+<!-- ========== MENU UTAMA DENGAN SUBMENU ========== -->
 <nav>
   <a href="#profil">Data Profil</a>
-  <a href="#kka">KKA</a>
-  <a href="#pjok">PJOK</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Informatika</button>
+    <div class="dropdown-content">
+      <a href="#kka">Pembelajaran KKA</a>
+      <a href="#kelas10inf">Informatika Kelas 10</a>
+      <a href="#kelas11inf">Informatika Kelas 11</a>
+      <a href="#kelas12inf">Informatika Kelas 12</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">PJOK</button>
+    <div class="dropdown-content">
+      <a href="#pjok10">PJOK Kelas 10</a>
+      <a href="#pjok11">PJOK Kelas 11</a>
+      <a href="#pjok12">PJOK Kelas 12</a>
+    </div>
+  </div>
+
+  <a href="#absensi">Absensi</a>
+  <a href="#penilaian">Penilaian</a>
   <a href="#kontak">Kontak</a>
 </nav>
 
+<!-- ========== ISI HALAMAN ========== -->
+
 <section id="profil">
-  <details>
+  <details open>
     <summary>Data Profil</summary>
     <p><strong>Nama:</strong> Kuswanto</p>
     <p><strong>Pendidikan:</strong> S1 Pendidikan Jasmani, Olahraga, dan Kesehatan (UNESA); S2 Pendidikan Agama Islam (UNISDA Lamongan)</p>
     <p><strong>Profesi:</strong> Guru PJOK & Informatika di SMA Negeri 1 Dawarblandong</p>
-    <p><strong>Deskripsi Singkat:</strong> Kuswanto adalah pendidik yang berpengalaman di bidang PJOK dan PAI, serta aktif mengembangkan pembelajaran digital berbasis proyek. Ia menciptakan berbagai inovasi seperti <em>Jalengku Tea</em>, <em>GEMAR (Gerakan Memungut Sampah Bersama)</em>, dan media pembelajaran PAI berbasis Google Sites. Dengan motto “Belajar sepanjang hayat, berinovasi tanpa batas, dan berbagi untuk kemajuan bersama,” beliau terus berkomitmen menciptakan pembelajaran yang inspiratif dan bermakna bagi siswa.</p>
+    <p><strong>Deskripsi Singkat:</strong> Kuswanto adalah pendidik yang berpengalaman di bidang PJOK dan PAI, serta aktif mengembangkan pembelajaran digital berbasis proyek. Ia menciptakan berbagai inovasi seperti <em>Jalengku Tea</em>, <em>GEMAR</em>, dan media pembelajaran berbasis Google Sites. Dengan motto “Belajar sepanjang hayat, berinovasi tanpa batas, dan berbagi untuk kemajuan bersama,” beliau berkomitmen menciptakan pembelajaran yang inspiratif dan bermakna bagi siswa.</p>
   </details>
 </section>
 
 <section id="kka">
   <details>
     <summary>Pembelajaran KKA</summary>
-    <p>Materi pembelajaran Koding dan Kecerdasan Artifisial (KKA) mencakup pengenalan dasar pemrograman, logika algoritma, serta penerapan AI sederhana dalam kehidupan sehari-hari. Siswa diharapkan mampu memahami konsep berpikir komputasional dan mengembangkan solusi kreatif berbasis teknologi.</p>
+    <p>Materi pembelajaran Koding dan Kecerdasan Artifisial mencakup pengenalan pemrograman, logika algoritma, dan penerapan AI dalam kehidupan sehari-hari. Siswa diharapkan memahami konsep berpikir komputasional dan mengembangkan solusi berbasis teknologi.</p>
   </details>
 </section>
 
-<section id="pjok">
+<!-- ========== INFORMATIKA ========== -->
+<section id="kelas10inf">
+  <details>
+    <summary>Informatika Kelas 10</summary>
+    <p>Materi meliputi pengenalan TIK, konsep data dan informasi, algoritma sederhana, serta keterampilan digital dasar.</p>
+  </details>
+</section>
+
+<section id="kelas11inf">
+  <details>
+    <summary>Informatika Kelas 11</summary>
+    <p>Fokus pada pemrograman Python, logika komputasi, dan dasar-dasar kecerdasan artifisial (AI) dalam konteks pembelajaran SMA.</p>
+  </details>
+</section>
+
+<section id="kelas12inf">
+  <details>
+    <summary>Informatika Kelas 12</summary>
+    <p>Materi lanjutan tentang proyek digital, etika teknologi, serta penerapan AI dan big data dalam kehidupan nyata.</p>
+  </details>
+</section>
+
+<!-- ========== PJOK ========== -->
+<section id="pjok10">
   <details>
     <summary>PJOK Kelas 10</summary>
-    <p>Fokus pembelajaran pada pengenalan aktivitas jasmani, kebugaran jasmani, dan nilai sportivitas. Siswa dilatih untuk menjaga kesehatan dan mengembangkan keterampilan motorik dasar.</p>
+    <p>Pengenalan aktivitas jasmani, kebugaran jasmani, dan nilai sportivitas. Siswa dilatih menjaga kesehatan dan mengembangkan keterampilan motorik dasar.</p>
   </details>
+</section>
 
+<section id="pjok11">
   <details>
     <summary>PJOK Kelas 11</summary>
-    <p>Pembelajaran difokuskan pada pengemban
+    <p>Pengembangan keterampilan olahraga permainan, senam, aktivitas rekreasi, dan pentingnya gaya hidup sehat.</p>
+  </details>
+</section>
+
+<section id="pjok12">
+  <details>
+    <summary>PJOK Kelas 12</summary>
+    <p>Menekankan pada kepemimpinan dalam olahraga dan penerapan nilai kebugaran jasmani sepanjang hayat.</p>
+  </details>
+</section>
+
+<!-- ========== ABSENSI & PENILAIAN ========== -->
+<section id="absensi">
+  <details>
+    <summary>Absensi Siswa</summary>
+    <p>Gunakan tautan berikut untuk mengisi kehadiran: <br>
+      📋 <a href="https://forms.gle/" target="_blank">Formulir Absensi Online</a>
+    </p>
+  </details>
+</section>
+
+<section id="penilaian">
+  <details>
+    <summary>Penilaian & Tugas</summary>
+    <p>Gunakan tautan berikut untuk melihat atau mengisi penilaian tugas: <br>
+      🧠 <a href="https://forms.gle/" target="_blank">Formulir Penilaian Kelas</a>
+    </p>
+  </details>
+</section>
+
+<section id="kontak">
+  <details>
+    <summary>Kontak</summary>
+    <p>Email: <a href="mailto:kuswanto1322@gmail.com">kuswanto1322@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/kuswanto1322">@kuswanto1322</a></p>
+    <p>Alamat: SMA Negeri 1 Dawarblandong, Mojokerto, Jawa Timur</p>
+  </details>
+</section>
+
+<footer>
+  <p>© 2025 Kuswanto | Website Pembelajaran SMA Negeri 1 Dawarblandong</p>
+</footer>
+
+</body>
+</html>

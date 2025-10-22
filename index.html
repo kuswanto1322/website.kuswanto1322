@@ -1,49 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Kuswanto</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f0f0f0; }
+    .container { background: white; padding: 30px; border-radius: 10px; max-width: 800px; margin: auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+    h1 { color: #2b2b2b; }
+    h2 { color: #555; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+    p { line-height: 1.6; }
+    .project { margin-top: 20px; }
+    .contact { margin-top: 30px; }
+  </style>
 </head>
-<body onload="getLocation()">
-    <div class='container'>
-                <form>
-                    <p class='h4 mb-4 text-center'>Klik 'Mulai' untuk melanjutkan!!</p>
-                    <p>Aktifkan GPS SmartPhone kalian dan izinkan akses lokasi untuk mendapatkan unique id, silakan reload jika anda belum mengizinkan akses lokasi.</p>
-                    <div class='form-group'>
-                        <label for='ip'>IP Address:</label>
-                        <?!= include(); ?>
-                    </div>
-                    <div class='form-group'>
-                        <label for='unik'>Unique ID:</label><p>silakkan salin unique id anda untuk proses verifikasi jawaban anda nanti.</p>
-                        <input type='text' class='form-control' id='unik' readonly>
-                    </div>
-                    <a type="button" class="btn btn-primary" href='GANTI DENGAN LINK GOOGLE FORM KALIAN' target='_blank'>Mulai</a>
-                </form>
+<body>
+  <div class="container">
+    <h1>Halo, Saya Kuswanto 👋</h1>
+    <p>Saya adalah seorang pengembang web pemula yang tertarik pada dunia teknologi dan desain.</p>
+
+    <h2>Keahlian</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Python dan GitHub</li>
+      <li>Desain web responsif</li>
+    </ul>
+
+    <h2>Proyek Saya</h2>
+    <div class="project">
+      <h3>🌟 Proyek 1: Website Sekolah</h3>
+      <p>Website sederhana untuk menampilkan profil sekolah menggunakan HTML dan CSS.</p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <div class="project">
+      <h3>📱 Proyek 2: Aplikasi Jadwal Pelajaran</h3>
+      <p>Aplikasi berbasis web untuk membantu siswa mengatur jadwal pelajaran harian.</p>
+    </div>
 
-    <script>
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      }
-    }
-
-    function makeid() {
-       var result           = '';
-       var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-       var charactersLength = characters.length;
-       for ( var i = 0; i < 7; i++ ) {
-          result += characters.charAt(Math.floor(Math.random() * charactersLength));          
-       }
-       document.getElementById("unik").value = result;
-       return result;
-    }
-
-    function showPosition(position) {
-        google.script.run.processForm(makeid(),position.coords.latitude,position.coords.longitude);
-    }
-    </script>
+    <div class="contact">
+      <h2>Kontak</h2>
+      <p>Email: <a href="mailto:kuswanto@gmail.com">kuswanto@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/kuswanto" target="_blank">github.com/kuswanto</a></p>
+    </div>
+  </div>
 </body>
 </html>

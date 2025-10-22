@@ -5,41 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Pembelajaran Kuswanto</title>
   <style>
-    /* ========== GAYA DASAR ========== */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
     }
+
     header {
       background-color: rgba(0, 0, 0, 0.7);
       text-align: center;
-      padding: 20px 0;
+      padding: 25px 0;
       border-bottom: 2px solid #00bfff;
     }
+
     header h1 {
       margin: 0;
       font-size: 2em;
-      letter-spacing: 1px;
       color: #00bfff;
     }
+
     header p {
       margin: 5px 0 0;
-      font-size: 1em;
       color: #ddd;
+      font-size: 1em;
     }
 
-    /* ========== NAVBAR ========== */
+    /* ===== NAVBAR ===== */
     nav {
       background-color: rgba(0, 0, 0, 0.85);
       overflow: hidden;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      border-bottom: 2px solid #00bfff;
     }
+
     nav a, .dropbtn {
       color: white;
       text-align: center;
@@ -49,17 +52,21 @@
       border: none;
       background: none;
       cursor: pointer;
+      font-size: 15px;
     }
+
     nav a:hover, .dropdown:hover .dropbtn {
       background-color: #00bfff;
       color: #000;
+      transition: 0.3s;
     }
 
-    /* ========== DROPDOWN ========== */
+    /* ===== DROPDOWN ===== */
     .dropdown {
       position: relative;
       display: inline-block;
     }
+
     .dropdown-content {
       display: none;
       position: absolute;
@@ -68,51 +75,43 @@
       z-index: 1;
       border-radius: 5px;
       border: 1px solid #00bfff;
+      text-align: left;
     }
+
     .dropdown-content a {
       color: white;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
-      text-align: left;
     }
+
     .dropdown-content a:hover {
       background-color: #00bfff;
       color: #000;
     }
+
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    /* ========== ISI HALAMAN ========== */
-    section {
-      background-color: rgba(0, 0, 0, 0.6);
-      margin: 20px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
-    }
-    details {
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 8px;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-left: 3px solid #00bfff;
-    }
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-      color: #00bfff;
-      font-size: 1.1em;
-    }
-    summary:hover {
-      color: #fff;
-    }
-    a {
-      color: #00bfff;
+    /* ===== HALAMAN UTAMA KOSONG ===== */
+    main {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
     }
 
-    /* ========== FOOTER ========== */
+    main h2 {
+      color: #00bfff;
+      font-size: 2em;
+    }
+
     footer {
       background-color: rgba(0, 0, 0, 0.8);
       text-align: center;
@@ -124,133 +123,45 @@
 </head>
 <body>
 
-<header>
-  <h1>Website Pembelajaran Kuswanto</h1>
-  <p>Guru PJOK & Informatika | SMA Negeri 1 Dawarblandong</p>
-</header>
+  <header>
+    <h1>Website Pembelajaran Kuswanto</h1>
+    <p>Guru PJOK & Informatika | SMA Negeri 1 Dawarblandong</p>
+  </header>
 
-<!-- ========== MENU UTAMA DENGAN SUBMENU ========== -->
-<nav>
-  <a href="#profil">Data Profil</a>
+  <nav>
+    <a href="#">Data Profil</a>
 
-  <div class="dropdown">
-    <button class="dropbtn">Informatika</button>
-    <div class="dropdown-content">
-      <a href="#kka">Pembelajaran KKA</a>
-      <a href="#kelas10inf">Informatika Kelas 10</a>
-      <a href="#kelas11inf">Informatika Kelas 11</a>
-      <a href="#kelas12inf">Informatika Kelas 12</a>
+    <div class="dropdown">
+      <button class="dropbtn">Informatika</button>
+      <div class="dropdown-content">
+        <a href="#">Pembelajaran KKA</a>
+        <a href="#">Informatika Kelas 10</a>
+        <a href="#">Informatika Kelas 11</a>
+        <a href="#">Informatika Kelas 12</a>
+      </div>
     </div>
-  </div>
 
-  <div class="dropdown">
-    <button class="dropbtn">PJOK</button>
-    <div class="dropdown-content">
-      <a href="#pjok10">PJOK Kelas 10</a>
-      <a href="#pjok11">PJOK Kelas 11</a>
-      <a href="#pjok12">PJOK Kelas 12</a>
+    <div class="dropdown">
+      <button class="dropbtn">PJOK</button>
+      <div class="dropdown-content">
+        <a href="#">PJOK Kelas 10</a>
+        <a href="#">PJOK Kelas 11</a>
+        <a href="#">PJOK Kelas 12</a>
+      </div>
     </div>
-  </div>
 
-  <a href="#absensi">Absensi</a>
-  <a href="#penilaian">Penilaian</a>
-  <a href="#kontak">Kontak</a>
-</nav>
+    <a href="#">Absensi</a>
+    <a href="#">Penilaian</a>
+    <a href="#">Kontak</a>
+  </nav>
 
-<!-- ========== ISI HALAMAN ========== -->
+  <main>
+    <h2>Selamat Datang di Website Pembelajaran Berbasis AI 💻</h2>
+  </main>
 
-<section id="profil">
-  <details open>
-    <summary>Data Profil</summary>
-    <p><strong>Nama:</strong> Kuswanto</p>
-    <p><strong>Pendidikan:</strong> S1 Pendidikan Jasmani, Olahraga, dan Kesehatan (UNESA); S2 Pendidikan Agama Islam (UNISDA Lamongan)</p>
-    <p><strong>Profesi:</strong> Guru PJOK & Informatika di SMA Negeri 1 Dawarblandong</p>
-    <p><strong>Deskripsi Singkat:</strong> Kuswanto adalah pendidik yang berpengalaman di bidang PJOK dan PAI, serta aktif mengembangkan pembelajaran digital berbasis proyek. Ia menciptakan berbagai inovasi seperti <em>Jalengku Tea</em>, <em>GEMAR</em>, dan media pembelajaran berbasis Google Sites. Dengan motto “Belajar sepanjang hayat, berinovasi tanpa batas, dan berbagi untuk kemajuan bersama,” beliau berkomitmen menciptakan pembelajaran yang inspiratif dan bermakna bagi siswa.</p>
-  </details>
-</section>
-
-<section id="kka">
-  <details>
-    <summary>Pembelajaran KKA</summary>
-    <p>Materi pembelajaran Koding dan Kecerdasan Artifisial mencakup pengenalan pemrograman, logika algoritma, dan penerapan AI dalam kehidupan sehari-hari. Siswa diharapkan memahami konsep berpikir komputasional dan mengembangkan solusi berbasis teknologi.</p>
-  </details>
-</section>
-
-<!-- ========== INFORMATIKA ========== -->
-<section id="kelas10inf">
-  <details>
-    <summary>Informatika Kelas 10</summary>
-    <p>Materi meliputi pengenalan TIK, konsep data dan informasi, algoritma sederhana, serta keterampilan digital dasar.</p>
-  </details>
-</section>
-
-<section id="kelas11inf">
-  <details>
-    <summary>Informatika Kelas 11</summary>
-    <p>Fokus pada pemrograman Python, logika komputasi, dan dasar-dasar kecerdasan artifisial (AI) dalam konteks pembelajaran SMA.</p>
-  </details>
-</section>
-
-<section id="kelas12inf">
-  <details>
-    <summary>Informatika Kelas 12</summary>
-    <p>Materi lanjutan tentang proyek digital, etika teknologi, serta penerapan AI dan big data dalam kehidupan nyata.</p>
-  </details>
-</section>
-
-<!-- ========== PJOK ========== -->
-<section id="pjok10">
-  <details>
-    <summary>PJOK Kelas 10</summary>
-    <p>Pengenalan aktivitas jasmani, kebugaran jasmani, dan nilai sportivitas. Siswa dilatih menjaga kesehatan dan mengembangkan keterampilan motorik dasar.</p>
-  </details>
-</section>
-
-<section id="pjok11">
-  <details>
-    <summary>PJOK Kelas 11</summary>
-    <p>Pengembangan keterampilan olahraga permainan, senam, aktivitas rekreasi, dan pentingnya gaya hidup sehat.</p>
-  </details>
-</section>
-
-<section id="pjok12">
-  <details>
-    <summary>PJOK Kelas 12</summary>
-    <p>Menekankan pada kepemimpinan dalam olahraga dan penerapan nilai kebugaran jasmani sepanjang hayat.</p>
-  </details>
-</section>
-
-<!-- ========== ABSENSI & PENILAIAN ========== -->
-<section id="absensi">
-  <details>
-    <summary>Absensi Siswa</summary>
-    <p>Gunakan tautan berikut untuk mengisi kehadiran: <br>
-      📋 <a href="https://forms.gle/" target="_blank">Formulir Absensi Online</a>
-    </p>
-  </details>
-</section>
-
-<section id="penilaian">
-  <details>
-    <summary>Penilaian & Tugas</summary>
-    <p>Gunakan tautan berikut untuk melihat atau mengisi penilaian tugas: <br>
-      🧠 <a href="https://forms.gle/" target="_blank">Formulir Penilaian Kelas</a>
-    </p>
-  </details>
-</section>
-
-<section id="kontak">
-  <details>
-    <summary>Kontak</summary>
-    <p>Email: <a href="mailto:kuswanto1322@gmail.com">kuswanto1322@gmail.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/kuswanto1322">@kuswanto1322</a></p>
-    <p>Alamat: SMA Negeri 1 Dawarblandong, Mojokerto, Jawa Timur</p>
-  </details>
-</section>
-
-<footer>
-  <p>© 2025 Kuswanto | Website Pembelajaran SMA Negeri 1 Dawarblandong</p>
-</footer>
+  <footer>
+    <p>© 2025 Kuswanto | Website Pembelajaran SMA Negeri 1 Dawarblandong</p>
+  </footer>
 
 </body>
 </html>

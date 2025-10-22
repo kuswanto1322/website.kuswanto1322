@@ -38,58 +38,31 @@
     nav a:hover {
       background-color: #575757;
     }
-    .dropdown {
-      float: left;
-      overflow: hidden;
-    }
-    .dropdown .dropbtn {
-      font-weight: bold;
-      border: none;
-      outline: none;
-      color: white;
-      padding: 14px 20px;
-      background-color: inherit;
-      font-family: inherit;
-      margin: 0;
-      cursor: pointer;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.9);
-      min-width: 180px;
-      z-index: 1;
-    }
-    .dropdown-content a {
-      float: none;
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-    }
-    .dropdown-content a:hover {
-      background-color: #575757;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
     section {
       background-color: rgba(0, 0, 0, 0.6);
       margin: 20px;
       padding: 20px;
       border-radius: 10px;
     }
-    h2 {
+    details {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
       color: #ffd700;
-      border-bottom: 2px solid #ffd700;
-      padding-bottom: 5px;
+      font-size: 1.1em;
+    }
+    summary:hover {
+      color: #fff;
     }
     footer {
       background-color: rgba(0, 0, 0, 0.8);
       text-align: center;
       padding: 10px;
-      position: relative;
       color: #ccc;
     }
   </style>
@@ -103,59 +76,52 @@
 
 <nav>
   <a href="#profil">Data Profil</a>
-
-  <div class="dropdown">
-    <button class="dropbtn">Informatika</button>
-    <div class="dropdown-content">
-      <a href="#pembelajaran-kka">Pembelajaran KKA</a>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <button class="dropbtn">PJOK</button>
-    <div class="dropdown-content">
-      <a href="#pjok10">PJOK Kelas 10</a>
-      <a href="#pjok11">PJOK Kelas 11</a>
-      <a href="#pjok12">PJOK Kelas 12</a>
-    </div>
-  </div>
-
+  <a href="#kka">KKA</a>
+  <a href="#pjok">PJOK</a>
   <a href="#kontak">Kontak</a>
 </nav>
 
 <section id="profil">
-  <h2>Data Profil</h2>
-  <p><strong>Nama:</strong> Kuswanto</p>
-  <p><strong>Pendidikan:</strong> S1 Pendidikan Jasmani, Olahraga, dan Kesehatan (UNESA); S2 Pendidikan Agama Islam (UNISDA Lamongan)</p>
-  <p><strong>Profesi:</strong> Guru PJOK & Informatika di SMA Negeri 1 Dawarblandong</p>
-  <p><strong>Deskripsi Singkat:</strong> Kuswanto adalah pendidik yang berpengalaman di bidang PJOK dan PAI, serta aktif mengembangkan pembelajaran digital berbasis proyek. Ia menciptakan berbagai inovasi seperti <em>Jalengku Tea</em>, <em>GEMAR (Gerakan Memungut Sampah Bersama)</em>, dan media pembelajaran PAI berbasis Google Sites. Dengan motto “Belajar sepanjang hayat, berinovasi tanpa batas, dan berbagi untuk kemajuan bersama,” beliau terus berkomitmen menciptakan pembelajaran yang inspiratif dan bermakna bagi siswa.</p>
+  <details>
+    <summary>Data Profil</summary>
+    <p><strong>Nama:</strong> Kuswanto</p>
+    <p><strong>Pendidikan:</strong> S1 Pendidikan Jasmani, Olahraga, dan Kesehatan (UNESA); S2 Pendidikan Agama Islam (UNISDA Lamongan)</p>
+    <p><strong>Profesi:</strong> Guru PJOK & Informatika di SMA Negeri 1 Dawarblandong</p>
+    <p><strong>Deskripsi Singkat:</strong> Kuswanto adalah pendidik yang berpengalaman di bidang PJOK dan PAI, serta aktif mengembangkan pembelajaran digital berbasis proyek. Ia menciptakan berbagai inovasi seperti <em>Jalengku Tea</em>, <em>GEMAR (Gerakan Memungut Sampah Bersama)</em>, dan media pembelajaran PAI berbasis Google Sites. Dengan motto “Belajar sepanjang hayat, berinovasi tanpa batas, dan berbagi untuk kemajuan bersama,” beliau terus berkomitmen menciptakan pembelajaran yang inspiratif dan bermakna bagi siswa.</p>
+  </details>
 </section>
 
-<section id="pembelajaran-kka">
-  <h2>Pembelajaran KKA</h2>
-  <p>Materi pembelajaran Koding dan Kecerdasan Artifisial (KKA) mencakup pengenalan dasar pemrograman, logika algoritma, serta penerapan AI sederhana dalam kehidupan sehari-hari. Siswa diharapkan mampu memahami konsep berpikir komputasional dan mengembangkan solusi kreatif berbasis teknologi.</p>
+<section id="kka">
+  <details>
+    <summary>Pembelajaran KKA</summary>
+    <p>Materi pembelajaran Koding dan Kecerdasan Artifisial (KKA) mencakup pengenalan dasar pemrograman, logika algoritma, serta penerapan AI sederhana dalam kehidupan sehari-hari. Siswa diharapkan mampu memahami konsep berpikir komputasional dan mengembangkan solusi kreatif berbasis teknologi.</p>
+  </details>
 </section>
 
-<section id="pjok10">
-  <h2>PJOK Kelas 10</h2>
-  <p>Fokus pembelajaran pada pengenalan aktivitas jasmani, kebugaran jasmani, dan nilai sportivitas. Siswa dilatih untuk menjaga kesehatan dan mengembangkan keterampilan motorik dasar.</p>
-</section>
+<section id="pjok">
+  <details>
+    <summary>PJOK Kelas 10</summary>
+    <p>Fokus pembelajaran pada pengenalan aktivitas jasmani, kebugaran jasmani, dan nilai sportivitas. Siswa dilatih untuk menjaga kesehatan dan mengembangkan keterampilan motorik dasar.</p>
+  </details>
 
-<section id="pjok11">
-  <h2>PJOK Kelas 11</h2>
-  <p>Pembelajaran difokuskan pada pengembangan keterampilan olahraga permainan, senam, dan aktivitas rekreasi, serta pentingnya gaya hidup sehat.</p>
-</section>
+  <details>
+    <summary>PJOK Kelas 11</summary>
+    <p>Pembelajaran difokuskan pada pengembangan keterampilan olahraga permainan, senam, dan aktivitas rekreasi, serta pentingnya gaya hidup sehat.</p>
+  </details>
 
-<section id="pjok12">
-  <h2>PJOK Kelas 12</h2>
-  <p>Menekankan pada penguatan karakter melalui aktivitas olahraga, kepemimpinan dalam tim, dan penerapan nilai-nilai kebugaran jasmani sepanjang hayat.</p>
+  <details>
+    <summary>PJOK Kelas 12</summary>
+    <p>Menekankan pada penguatan karakter melalui aktivitas olahraga, kepemimpinan dalam tim, dan penerapan nilai-nilai kebugaran jasmani sepanjang hayat.</p>
+  </details>
 </section>
 
 <section id="kontak">
-  <h2>Kontak</h2>
-  <p>Email: <a href="mailto:kuswanto1322@gmail.com" style="color: #ffd700;">kuswanto1322@gmail.com</a></p>
-  <p>Instagram: <a href="https://instagram.com/" style="color: #ffd700;">@kuswanto1322</a></p>
-  <p>Alamat: SMA Negeri 1 Dawarblandong, Mojokerto, Jawa Timur</p>
+  <details>
+    <summary>Kontak</summary>
+    <p>Email: <a href="mailto:kuswanto1322@gmail.com" style="color: #ffd700;">kuswanto1322@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/kuswanto1322" style="color: #ffd700;">@kuswanto1322</a></p>
+    <p>Alamat: SMA Negeri 1 Dawarblandong, Mojokerto, Jawa Timur</p>
+  </details>
 </section>
 
 <footer>
